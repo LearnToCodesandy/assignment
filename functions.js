@@ -1,7 +1,7 @@
 const ls = localStorage;
 
 const checkUserExistence = (name, email) => {
-  const users = ls.getItem('users');
+  const users = ls.getItem("users");
   if (users) {
     const usersArr = JSON.parse(users);
     const found = [];
@@ -21,17 +21,17 @@ const checkUserExistence = (name, email) => {
 };
 
 const addNewUser = (data) => {
-  const users = ls.getItem('users');
+  const users = ls.getItem("users");
   if (users) {
     const newUsers = [data, ...JSON.parse(users)];
-    ls.setItem('users', JSON.stringify(newUsers));
+    ls.setItem("users", JSON.stringify(newUsers));
   } else {
-    ls.setItem('users', JSON.stringify([data]));
+    ls.setItem("users", JSON.stringify([data]));
   }
 };
 
 const isValidUserForSignIn = (name, password) => {
-  const users = ls.getItem('users');
+  const users = ls.getItem("users");
   if (users) {
     const userFound = JSON.parse(users).filter(
       (user) => user.name === name && user.password === password
@@ -46,16 +46,16 @@ const isValidUserForSignIn = (name, password) => {
   }
 };
 
-async function getData(url, body) {
-  const options = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(body),
-  };
-  const res = await fetch(url, options);
-  return res;
-}
+// async function getData(url, body) {
+//   const options = {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(body),
+//   };
+//   const res = await fetch(url, options);
+//   return res;
+// }
 
-export { checkUserExistence, addNewUser, isValidUserForSignIn, getData };
+export { checkUserExistence, addNewUser, isValidUserForSignIn };

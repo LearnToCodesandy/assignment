@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import ContentContainer from "../../components/ContentContainer";
 import Navbar from "../../components/Navbar";
 import "./home.css";
-// import { getData } from "../../../functions";
 
 const Home = ({ setAuth }) => {
   useEffect(() => {
@@ -26,8 +25,6 @@ const Home = ({ setAuth }) => {
       console.log(data);
     }
     getData();
-    // const promise = getData("/movieList", data);
-    // Promise.all(promise).then((response) => console.log(response));
   }, []);
   return (
     <div className="home__wrapper">
