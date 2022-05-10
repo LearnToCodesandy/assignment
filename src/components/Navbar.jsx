@@ -20,7 +20,7 @@ const Navbar = ({ setAuth }) => {
           XXXXXXXXX09
         </li>
         <li>
-          <strong>strongail: </strong> XXXXXX@gmail.com
+          <strong>Email: </strong> XXXXXX@gmail.com
         </li>
       </div>
       <li className="btn btn-danger" onClick={() => setAuth(false)}>
