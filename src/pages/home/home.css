@@ -1,0 +1,33 @@
+.home__wrapper {
+  position: absolute;
+  left: 50px;
+  top: 0;
+  width: calc(100% - 100px);
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+.company__details {
+  color: var(--clr-ghost-white);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  cursor: pointer;
+  position: relative !important;
+  user-select: none;
+}
+
+.details {
+  position: absolute;
+  top: 3.5rem;
+  left: 3rem;
+  background-color: var(--clr-ghost-white);
+  padding: 1rem;
+  border-radius: 4px;
+}

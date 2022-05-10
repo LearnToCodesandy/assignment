@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+:root {
+  --clr-gunmetal: #30343fff;
+  --clr-gunmetal-dark: #22252c;
+  --clr-ghost-white: #fafaffff;
+  --clr-lavender-blue: #e4d9ffff;
+  --clr-space-cadet: #273469ff;
+  --clr-space-cadet-2: #1e2749ff;
+  --font-family: 'Outfit', sans-serif;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: var(--font-family);
+}
+
+body {
+  width: 95%;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--clr-gunmetal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* helper classes */
+.display-hide {
+  display: none;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border: 2px solid transparent;
+  margin: 0.3rem 0;
+  border-radius: 4px;
+
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease-in all;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--clr-ghost-white);
+}
+
+.btn-primary {
+  background-color: var(--clr-lavender-blue);
+}
+
+.btn-primary:hover {
+  border: 2px solid var(--clr-ghost-white);
+}
+
+.btn-danger {
+  background-color: crimson;
+  color: var(--clr-ghost-white);
+}
+
+.btn-danger:hover {
+  background-color: crimson;
+  box-shadow: 0 0 4px crimson;
+  opacity: 0.9;
+}
