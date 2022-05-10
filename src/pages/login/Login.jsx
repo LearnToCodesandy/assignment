@@ -73,30 +73,37 @@ const Login = ({ setAuth }) => {
             }}
           >
             <div className="form__item">
-              <label htmlFor="name">Name</label>
+              <label htmlFor="name">Name *</label>
               <input
                 type="text"
                 name="name"
                 id="name"
+                required={true}
                 placeholder="john doe ..."
               />
             </div>
             <div className="form__item">
-              <label htmlFor="password">Password</label>
-              <input type="password" name="password" id="password" />
+              <label htmlFor="password">Password *</label>
+              <input
+                type="password"
+                required={true}
+                name="password"
+                id="password"
+              />
             </div>
             <div className="form__item">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">Email *</label>
               <input
                 type="email"
                 name="email"
                 id="email"
+                required={true}
                 placeholder="example@abc.xyz"
               />
             </div>
             <div className="form__item">
-              <label htmlFor="phone">Phone Number</label>
-              <input type="text" name="phone" id="phone" />
+              <label htmlFor="phone">Phone Number *</label>
+              <input type="text" name="phone" required={true} id="phone" />
             </div>
             <div className="form__item">
               <label htmlFor="profession">Profession</label>
@@ -118,17 +125,18 @@ const Login = ({ setAuth }) => {
         ) : (
           <form className="form signin" onSubmit={(e) => handleSignIn(e)}>
             <div className="form__item">
-              <label htmlFor="username">Name</label>
+              <label htmlFor="username">Name *</label>
               <input
                 type="text"
                 name="username"
                 id="username"
+                required={true}
                 placeholder="john doe"
               />
             </div>
             <div className="form__item">
-              <label htmlFor="pass">Password</label>
-              <input type="password" name="pass" id="pass" />
+              <label htmlFor="pass">Password *</label>
+              <input type="password" required={true} name="pass" id="pass" />
             </div>
 
             <input type="submit" className="btn btn-primary" value="Sign In" />

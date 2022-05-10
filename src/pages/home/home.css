@@ -139,3 +139,8 @@ nav {
   background-color: var(--clr-space-cadet);
   border: none;
 }
+
+.loading {
+  color: var(--clr-ghost-white);
+  font-size: clamp(2rem, 3vw, 3rem);
+}
